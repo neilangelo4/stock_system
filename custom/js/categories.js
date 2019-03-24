@@ -1,1 +1,1 @@
-<label class='btn btn-success'>Available</label>
+// <label class='btn btn-success'>Available</label>

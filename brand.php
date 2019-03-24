@@ -15,9 +15,9 @@
 		     Manage Brand
 		  </div>
 		  <div class="card-body text-right">
-		    <div class="remove-messages"></div>
+		    <div class="remove-messages row"></div>
 		    	<div class="div-action" style="padding-bottom: 20px">
-		    		<button class="btn btn-primary" data-toggle="modal" data-target="#addBrandModal"><i class="fas fa-plus"></i> Add Brand</button>
+		    		<button class="btn btn-primary" data-toggle="modal" data-target="#addBrandModal"><i class="fas fa-plus" onclick="addBrand()"></i> Add Brand</button>
 		    </div> <!-- div action -->
 		  </div>
 		   <table class="table" id="manageBrandTable">
@@ -67,8 +67,9 @@
 			   	</div>
 
 			    <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" id="remove_modal" data-dismiss="modal">Close</button>
-			        <button type="submit" class="btn btn-primary" id="createBrandBtn" data-loading-text="Loading..." >Save changes</button>
+			        <button type="button" class="btn btn-secondary" id="remove_modal" data-dismiss="modal">
+			        	<i class="fas fa-times-circle"></i> Close</button>
+			        <button type="submit" class="btn btn-primary" id="createBrandBtn" data-loading-text="Loading..."><i class="fas fa-clipboard-check"></i> Save changes</button>
 			    </div>
 			</form>
 
@@ -76,6 +77,25 @@
   	</div>
 </div>
 
+<div class="modal" tabindex="-1" role="dialog" id="removeBrandModal">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        <h5 class="modal-title"><i class="fas fa-trash"></i> Remove Brand </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      		</div>
+      <div class="modal-body">
+        	<p>Do you really want to remove? </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times-circle"></i> Close</button>
+        <button type="button" class="btn btn-primary" id="removeBrandBtn"><i class="fas fa-clipboard-check"></i> Save changes</button>
+      </div>
+  	</div>
+  </div>
+</div>
 
 <div class="modal" tabindex="-1" role="dialog" id="editBrandModal">
   <div class="modal-dialog" role="document">
@@ -88,6 +108,7 @@
       </div>
       <form id="editBrandForm" action="php_action/editBrand.php" method="POST">
       <div class="modal-body">
+      	<div id="edit-brand-messages"></div>
 			<div class="form-group row">
 		    <label for="editBrandName" class="col-sm-3 col-form-label">Brand Name:</label>
 		    <div class="col-sm-9">
@@ -105,36 +126,16 @@
 		    	</select>
 		    </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer editBrandFooter">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times-circle"></i> Close</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-clipboard-check" id="editBrandBtn"></i> Save changes</button>
       </div>
+  		</div>
+      </form>
     </div>
   </div>
 </div>
-</form>
 
-
-
-<div class="modal" tabindex="-1" role="dialog" id="removeBrandModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"><i class="fas fa-trash"></i> Remove Brand </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Do you really want to remove? </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-minus-circle"></i>Close</button>
-        <button type="button" class="btn btn-primary"><i class="fas fa-clipboard-check"></i> Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script type="text/javascript" src="custom/js/brand.js"></script>
 

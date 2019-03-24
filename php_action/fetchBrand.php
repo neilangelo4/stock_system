@@ -21,16 +21,16 @@
 			$button = 
 					'<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 						<div class="btn-group" role="group">
-							<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
+							<button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle"data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
 								Action
 					      	</button>
 					      	<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
 						      	<a type="button"  data-toggle="modal" data-target="#editBrandModal" onclick="editBrands('.$brandId.')" class="dropdown-item">
 						      		<i class="fas fa-edit"></i> Edit</a>
-						      		<a type="button" data-toggle="modal" data-target="#removeBrandModal" onclick="removeBrands('.$brandId.')" class="dropdown-item">
-						      		<i class="fas fa-trash-alt"></i>
-						      		 Remove
-						      	</a>
+						      		<a type="button" data-toggle="modal" data-target="#removeBrandModal" 
+						      		onclick="removeBrands('.$brandId.')" class="dropdown-item">
+						      		<i class="fas fa-trash"></i> Remove
+						      	</a>	
 					    	</div>
 					    </div>	
 					</div>';
