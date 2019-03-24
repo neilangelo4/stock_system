@@ -1,0 +1,1 @@
+<label class='btn btn-success'>Available</label>
