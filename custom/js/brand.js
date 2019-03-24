@@ -279,9 +279,11 @@ function editBrands(brandId = null){
 
 							//$("#createBrandBtn").button('reset');
 							if(response.success == true){
+								//hide modal
+								$("#editBrandModal").modal('hide');
 								//reload the manage member table
 
-
+							
 								manageBrandTable.ajax.reload(null, false);
 
 									swal({
