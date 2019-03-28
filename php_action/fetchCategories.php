@@ -1,21 +1,20 @@
 <?php
-
+	
 	require_once 'core.php';
 
-	$sql = "SELECT * FROM brands WHERE brand_status = 1";
+	$sql = "SELECT * FROM category WHERE categories_status = 1";
 	$result = $connect->query($sql);
 	$output = array('data' => array());
-
-	if($result->num_rows > 0){
+	if($result->num_rows > 0){	
+		$activeCategories = "";
 		while($row = $result->fetch_array()){
-			$brandId = $row[0];
-			//active brand
+			$categoriesId = $row[0];
 			if($row[2]==1){
-				//var_dump();
-				$activeBrands ="<label class='btn btn-success'> Available</label>";
+
+				$activeCategories ="<label class='btn btn-success'> Available</label>";
 			}else{
 				//deactivate brand
-				$activeBrands ="<label class='btn btn-danger'> Not Available</label>";
+				$activeCategories ="<label class='btn btn-danger'> Not Available</label>";
 			}
 			$button = 
 					'<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -24,25 +23,27 @@
 								Action
 					      	</button>
 					      	<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-						      	<a type="button"  data-toggle="modal" data-target="#editBrandModal" onclick="editBrands('.$brandId.')" class="dropdown-item">
+						      	<a type="button" data-toggle="modal" data-target="#editCategoriesModal" id="editCategoryBtn" onclick="editCategory('.$categoriesId.')" class="dropdown-item">
 						      		<i class="fas fa-edit"></i> Edit</a>
-						      		<a type="button" data-toggle="modal" data-target="#removeBrandModal" 
-						      		onclick="removeBrands('.$brandId.')" class="dropdown-item">
+						      		<a type="button" data-toggle="modal" data-target="#removeCategoriesModal" id="removeCategoriesModalBtn"
+						      		onclick="removeCategory('.$categoriesId.')" class="dropdown-item">
 						      		<i class="fas fa-trash"></i> Remove
 						      	</a>	
 					    	</div>
 					    </div>	
 					</div>';
 
-			$output['data'][] = array(
+				$output['data'][] = array(
 				$row[1],
-				$activeBrands,
+				$activeCategories,
 				$button
-			);
-		}//while
-		
-	}
-	$connect->close();
-	echo json_encode($output);
-	
 
+			);
+
+			}
+
+		}
+
+	$connect->close();
+
+	echo json_encode($output);

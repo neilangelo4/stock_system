@@ -2,25 +2,23 @@
 
 <div class="row">
 	<div class="col-md-12">
-		
-
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
 		    <li class="breadcrumb-item active" aria-current="page">Brand</li>
 		  </ol>
 		</nav>
-		<div class="card">
-		  <div class="card-header"><i class="fas fa-edit"></i>
-		     Manage Brand
-		  </div>
-		  <div class="card-body text-right">
-		    <div class="remove-messages row"></div>
-		    	<div class="div-action" style="padding-bottom: 20px">
-		    		<button class="btn btn-primary" data-toggle="modal" data-target="#addBrandModal"><i class="fas fa-plus" onclick="addBrand()"></i> Add Brand</button>
+<div class="card">
+	<div class="card-header"><i class="fas fa-edit"></i>
+	Manage Brand
+	</div>
+		 <div class="card-body text-right">
+		   <div class="remove-messages row"></div>
+		    <div class="div-action" style="padding-bottom: 20px">
+		    	<button class="btn btn-primary" data-toggle="modal" data-target="#addBrandModal"><i class="fas fa-plus-square"></i> Add Brand</button>
 		    </div> <!-- div action -->
 		  </div>
-		   <table class="table" id="manageBrandTable">
+		   	<table class="table" id="manageBrandTable">
 				  <thead>
 				    <tr>
 				      <th scope="col">Brand Name</th>

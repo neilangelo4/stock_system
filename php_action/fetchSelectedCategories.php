@@ -2,9 +2,9 @@
 
 require_once 'core.php';
 
-$brandId = $_POST['brandId'];
+$categoriesId = $_POST['categoriesId'];
 
-$sql = "SELECT brand_id, brand_name, brand_active, brand_status FROM brands WHERE brand_id = $brandId";
+$sql = "SELECT categories_id, categories_name, categories_active, categories_status FROM category WHERE categories_id = $categoriesId";
 $result = $connect->query($sql);
 	
 if($result->num_rows > 0){
