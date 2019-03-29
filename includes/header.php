@@ -45,7 +45,10 @@
       </li>
       <li class="nav-item" id="navCategories">
         <a class="nav-link" href="categories.php"><i class="fas fa-th"></i> Category</a>
-      </li>      
+      </li> 
+      <li class="nav-item" id="navProduct">
+        <a class="nav-link" href="product.php"><i class="fab fa-product-hunt"></i> Product</a>
+      </li>     
       <li class="nav-item dropdown" id="navOrder">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-cart"></i>
           Orders

@@ -251,43 +251,10 @@ function editBrands(brandId = null){
 					  icon: "success",
 					  button: "Close",
 					});
-								// reset form text
-								 //$("#editBrandForm")[0].reset();
-								// //remove error text
-								// $(".text-danger").remove();
-								// // remove the form error
-								// $(".form-group").removeClass('has-error').removeClass('has-success');
 
-								// $("#edit-brand-messages").html('<div class="alert alert-success fade show">' +
-								// 	'<strong><i class="fas fa-thumbs-up"></i></strong>'+
-								//   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
-								//     '<span aria-hidden="true">&times;</span>'+
-								//   '</button>'+  response.messages +
-								// '</div>');
-
-								// $(".alert-success").delay(500).show(10, function() {
-								// 	$(this).delay(3000).hide(10, function(){
-								// 		$(this).remove();
-								// 	});
-								// })
-
-								// swal({
-								//   title: "Successfully Added!",
-								//   text: "Added item set to "+ setItemItemStat ,
-								//   icon: "success",
-								//   button: "Close",
-								// });
-
-								//$('#remove_modal').click();
-
-							}
-
-							// $('#modal').modal('hide');
-
+							}	
 						},  
-						// error: function(e) {
-						//    alert('asdjhaguysdg');
-					 //     console.log(e.statusText);
+						
 					 //  	}
 						});
 					}
