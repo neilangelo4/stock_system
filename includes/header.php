@@ -9,6 +9,7 @@
 	<title>Stock Management System</title>
 </head>
 <!-- bootstrap -->
+  
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 	<!-- bootstrap theme -->
 	<!-- <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-re.min.css"> -->
@@ -23,8 +24,10 @@
 	<!-- jquery -->
 	<script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
 	<!-- jqueryui -->
-	<link rel="stylesheet" type="text/css" href="assets/jquery-ui/jquery-ui.min.css">
-	<script type="text/javascript" src="assets/jquery-ui/jquery-ui.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="assets/jquery-ui/jquery-ui.min.css"> -->
+	<!-- <script type="text/javascript" src="assets/jquery-ui/jquery-ui.min.js"></script> -->
+  <script src="assets/plugins/fileinput/js/fileinput.js"></script>
+  <script src="assets/plugins/fileinput/themes/fa/theme.js"></script>
 	<!-- bootstrap js -->
 	<!-- <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script> -->
   

@@ -120,13 +120,10 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary" id="createCategoriesBtn">Save Changes</button>
       </div>
+      </div>
       </form>
-    </div>
   </div>
 </div>
-
-
-
 
 
 <script type="text/javascript" src="custom/js/categories.js"></script>
