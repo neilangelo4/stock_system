@@ -4,6 +4,7 @@
 
 	$sql = "SELECT * FROM category WHERE categories_status = 1";
 	$result = $connect->query($sql);
+	
 	$output = array('data' => array());
 	if($result->num_rows > 0){	
 		$activeCategories = "";

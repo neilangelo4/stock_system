@@ -7,6 +7,8 @@
 	$output = array('data' => array());
 
 	if($result->num_rows > 0){
+		
+		$activeBrands = "";
 		while($row = $result->fetch_array()){
 			$brandId = $row[0];
 			//active brand

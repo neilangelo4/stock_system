@@ -1,5 +1,4 @@
 var manageProductTable;
-
 $(document).ready(function() {
 //top navbar
 $("#navProduct").addClass('active');
@@ -12,7 +11,7 @@ manageProductTable = $("#manageProductTable").DataTable({
 $("#addProductModalBtn").unbind('click').bind('click', function() {
     //product form reset
         //$("#submitProductForm")[0].reset();
-        $("input[type='text']").val();
+        $("input[type='text']").val("");
         $("select").val("");
         $(".fileinput-remove-button").click();
 
@@ -21,7 +20,7 @@ $("#addProductModalBtn").unbind('click').bind('click', function() {
             maxFileSize: 1500,
             showClose: false,
             showCaption: false,
-            browseLabel: '',
+            browseLabel: '',    
             removeLabel: '',
             browseIcon: '<i class="fas fa-folder"></i>',
             removeIcon: '<i class="fas fa-times"></i></i>',
@@ -99,7 +98,7 @@ $("#addProductModalBtn").unbind('click').bind('click', function() {
                     success:function(response){
                         if(response.success == true){
                         //alert('ok');
-                        $("input[type='text']").val();
+                        $("input[type='text']").val("");
                         $("select").val("");
                         $(".fileinput-remove-button").click();
                         //$("#createProductBtn").button('reset');
